@@ -141,7 +141,7 @@ html{
 
 
 .tile-whitepaper {
-	border: 1px rgb(140, 140, 40) solid;
+	border: 1px rgb(180, 140, 40) solid;
 	border-radius: 0px;
 	width: calc((100vw - 60px)*0.5);
 	height: calc((100vh - 230px)*0.5);
@@ -152,7 +152,7 @@ html{
 	box-shadow: 3px 3px 3px #000000;
 }
 .tile-whitepaper:hover {
-	border: 1px rgb(170, 170, 0) solid;
+	border: 1px rgb(210, 170, 0) solid;
 	//border-radius: 25px;
 	bottom: 37px;
 	left: 23px;
@@ -308,7 +308,33 @@ html{
 	max-height: 143px;
 }
 #speechBubble{
-	float: left;
+
+}
+.speech-bubble-area{
+	//border-style: solid;
+	//border-color: green;
+	width: calc(100vw - 210px);
+	height: calc(133px);
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	text-align: left;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	//align-items: center;
+	justify-content: center;
 	vertical-align: middle;
 }
 

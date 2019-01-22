@@ -6,13 +6,16 @@ Menu.divs = [
 ];
 
 Menu.phrases = [
-	'Yooo, welcome to my place haha',
-	'Yea ive been workin on some stuff',
-	'Reach out to me here, man',
-	'You cant get fid of the Pee Pee Poo Poo man'
+	'Whoa hey! haha you must be new around here - let me show u around??',
+	'Yea ive been workin on some stufff',
+	'Reach out to me here, mann',
+	'Cmon click around, man - only good stuff here :))'
 ];
 Menu.phraseIndex = 0;
 Menu.currentChar = 0;
+
+Menu.phraseTick = 0;
+Menu.hangTime = 70;
 //Notificatoins
 Menu.notifQueue = [];
 
@@ -24,11 +27,22 @@ Menu.hideAllDivs = function(){
 //On startup
 
 Menu.tickPhrases = function(){
+	Menu.phraseTick++;
+
+	//Std looper
 	if(Menu.currentChar < Menu.phrases[Menu.phraseIndex].length-1){
 		Menu.currentChar++;
 	}
 	else{
 		Menu.currentChar = Menu.phrases[Menu.phraseIndex].length - 1;
+		Menu.hangTime--;
+	}
+
+	//Switcher
+	if(Menu.hangTime < 1){
+		Menu.hangTime = 70;
+		Menu.currentChar = 0;
+		Menu.phraseIndex = (Menu.phraseIndex + 1) % Menu.phrases.length;
 	}
 
 	document.getElementById('speechBubble').innerHTML = '' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
