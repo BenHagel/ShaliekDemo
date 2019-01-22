@@ -1,7 +1,16 @@
+@font-face {
+	font-family: 'vcr_osd_monoregular';
+	src: url('VCR_OSD_MONO.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: vcr_osd_monoregular;
+}
+
 html{
 	background-color: black;
-	font-family: Arial, Helvetica, sans-serif;
-	text-rendering: optimizeLegibility;
 	color: white;
 	overflow: hidden;
 	width: 100%;
@@ -20,17 +29,8 @@ html{
     border:none !important;
     overflow:hidden;
 }
-input {
-	font-size: 36px;
-	font-family: 'Roboto-Light', sans-serif;
-	text-rendering: optimizeLegibility;
-}
-textarea {
-	font-size: 14px;
-	font-family: 'Roboto-Light', sans-serif;
-	text-rendering: optimizeLegibility;
-	text-align: center;
-}
+
+
 
 
 
@@ -267,27 +267,6 @@ textarea {
 
 
 
-
-
-
-
-#notifArea{
-	position: fixed; /* Sit on top of the page content */
-	//display: none; /* Hidden by default */
-	width: 100%; /* Full width (cover the whole page) */
-	height: 15%; /* Full height (cover the whole page) */
-	top: 85%;//calc(90vh);//0;
-	left: 0;//calc(50vw);
-	right: 0;
-	bottom: calc(100vh);
-	font-size: 20px;
-	font-family: 'Roboto-Light', sans-serif;
-	text-rendering: optimizeLegibility;
-	background-color: rgba(0,0,0,0.7); /* Black background with opacity */
-	z-index: 2;
-	-webkit-animation: notifMove 0.35s; /* Safari 4.0 - 8.0 */
-	animation: notifMove 0.35s;
-}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes notifMove {
