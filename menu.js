@@ -6,11 +6,13 @@ Menu.divs = [
 ];
 
 Menu.phrases = [
-	'Yooo, welcome to my place',
+	'Yooo, welcome to my place haha',
 	'Yea ive been workin on some stuff',
 	'Reach out to me here, man',
 	'You cant get fid of the Pee Pee Poo Poo man'
 ];
+Menu.phraseIndex = 0;
+Menu.currentChar = 0;
 //Notificatoins
 Menu.notifQueue = [];
 
@@ -20,14 +22,22 @@ Menu.hideAllDivs = function(){
 };
 
 //On startup
-Menu.onLoad = function(){
 
-	setTimeout(Menu.tickPhrases, 500);
-};
 Menu.tickPhrases = function(){
-	
+	if(Menu.currentChar < Menu.phrases[Menu.phraseIndex].length-1){
+		Menu.currentChar++;
+	}
+	else{
+		Menu.currentChar = Menu.phrases[Menu.phraseIndex].length - 1;
+	}
 
-	setTimeout(Menu.tickPhrases, 40);
+	document.getElementById('speechBubble').innerHTML = '' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
+
+	setTimeout(Menu.tickPhrases, 80);
+};
+Menu.onLoad = function(){
+	console.log('startup...');
+	setTimeout(Menu.tickPhrases, 500);
 };
 
 

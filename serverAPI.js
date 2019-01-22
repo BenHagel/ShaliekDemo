@@ -1,6 +1,6 @@
 var ServerAPI = {};
-ServerAPI.transactionURL = 'http://affsoft.ca/transaction';
-ServerAPI.baseURL = 'http://affsoft.ca/api';
+//ServerAPI.transactionURL = 'http://affsoft.ca/transaction';
+//ServerAPI.baseURL = 'http://affsoft.ca/api';
 //test ;)
 ServerAPI.xmlRequest = function(type, req, to){
 	var xhr = new XMLHttpRequest();
@@ -37,7 +37,7 @@ function hex(buffer) {
 	return hexCodes.join("");
 }
 sha256("foobar").then(function(digest) {
-	console.log(digest);
+	//console.log(digest);
 }); // outputs "c3ab8ff13720e8ad9047dd39466b3c8974e592c2fa383d4a3960714caef0c4f2"
 
 

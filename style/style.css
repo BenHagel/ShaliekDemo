@@ -325,8 +325,12 @@ textarea {
 .header {
 	padding: 10px 20px 10px 20px;
 	min-height: 143px;//16px;
-	//overflow: hidden;
+	overflow: break-word;
 	max-height: 143px;
+}
+#speechBubble{
+	float: left;
+	vertical-align: middle;
 }
 
 .infoHeaderTable {
