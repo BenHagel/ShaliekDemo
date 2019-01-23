@@ -1,16 +1,19 @@
 var Menu = {};
 
 Menu.divs = [
-	'homescreen', 'walletscreen', 'techscreen',
-	'whitepaperscreen', 'teamscreen'
+	'homescreen', 'projectsscreen', 'resumescreen',
+	'comedyscreen', 'contactscreen'
 ];
 
-Menu.phrases = [
+Menu.phrases = [];
+Menu.homephrases = [
 	'Whoa hey! haha you must be new around here - let me show u around??',
-	'Yea ive been workin on some stufff',
-	'Reach out to me here, mann',
+	'Yea ive been workin on some new stufff',
+	'Ive been busy recently - so I may not respond right awayy',
 	'Cmon click around, man - only good stuff here :))'
 ];
+Menu.contactphrases = ['Contact screen, my mann'];
+
 Menu.phraseIndex = 0;
 Menu.currentChar = 0;
 
@@ -23,8 +26,6 @@ Menu.hideAllDivs = function(){
 	for(var tt = 0;tt < Menu.divs.length;tt++)
 		document.getElementById(Menu.divs[tt]).classList.add('hidden');
 };
-
-//On startup
 
 Menu.tickPhrases = function(){
 	Menu.phraseTick++;
@@ -51,9 +52,30 @@ Menu.tickPhrases = function(){
 };
 Menu.onLoad = function(){
 	console.log('startup...');
+	Menu.phrases = Menu.homephrases;
 	setTimeout(Menu.tickPhrases, 500);
 };
 
+
+
+
+//Different screens
+Menu.goToProjectsPage = function(){
+	Menu.hideAllDivs();
+	document.getElementById('projectsscreen').classList.remove('hidden');
+};
+Menu.goToResumePage = function(){
+	Menu.hideAllDivs();
+	document.getElementById('resumescreen').classList.remove('hidden');
+};
+Menu.goToComedyPage = function(){
+	Menu.hideAllDivs();
+	document.getElementById('comedyscreen').classList.remove('hidden');
+};
+Menu.goToContactsPage = function(){
+	Menu.hideAllDivs();
+	document.getElementById('contactscreen').classList.remove('hidden');
+};
 
 Menu.notifTicker = function(){
 	if(Menu.notifQueue.length > 0){//Make sure there is atleast one notif in the queue

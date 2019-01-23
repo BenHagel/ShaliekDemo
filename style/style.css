@@ -306,6 +306,8 @@ html{
 	min-height: 143px;//16px;
 	overflow: break-word;
 	max-height: 143px;
+	color: white;
+	font-size: 33px;
 }
 #speechBubble{
 
@@ -338,53 +340,15 @@ html{
 	vertical-align: middle;
 }
 
-.infoHeaderTable {
-	color: white;
-	border: 1px solid;
+.gear-area{
+	width: calc(50px);
+	height: calc(50px);
+	position: absolute;
+	border-style: solid;
+	border-color: green;
+	top: 20px;
+	right: 20px;
 
-	height: 75px;
-}
-.infoHeaderTable:hover {
-	color: hotpink;
-	border: 1px solid;
-
-	height: 75px;
-}
-
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-  font-size: 25px;
-  color: white;
-}
-
-
-/* Float the link section to the right */
-.header-right {
-	float: right;
-}
-
-.nimAddressRow {
-	vertical-align: text-top;
-}
-.balanceRow {
-	vertical-align: text-bottom;
-}
-.nimAddressLabel {
-	vertical-align: text-top;
-	width: 180px;
-	align: left;
-}
-.balanceLabel {
-	vertical-align: text-bottom;
-	width: 180px;
-	align: left;
-
-}
-.nimAddressValue {
-	text-align: right;
-}
-.balanceValue {
-	text-align: right;
 }
 
 

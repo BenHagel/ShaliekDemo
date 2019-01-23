@@ -24,30 +24,32 @@
                 <div class="speech-bubble-area">
                     <span id="speechBubble"></span>
                 </div>
-
             </a>
+            <!--<a class="gear-area">
+                <img width="50px" height="50px" src="raw/gear.PNG">
+            </a>-->
         </div>
 
         <div id="homescreen" class="tile-screen">
-            <a href="javascript:void(0)" onclick="ServerAPI.goToWallet()" class="tile-wallet">
+            <a href="javascript:void(0)" onclick="Menu.goToProjectsPage()" class="tile-wallet">
                 <div class="tile-content">
                     <img class="tile-image-icon" src="raw/t1.PNG">
                     <span class="tile-label">content</span>
                 </div>
             </a>
-            <a href="javascript:void(0)" onclick="ServerAPI.goToTech()" class="tile-tech">
+            <a href="javascript:void(0)" onclick="Menu.goToResumePage()" class="tile-tech">
                 <div class="tile-content">
                     <img class="tile-image-icon" src="raw/t4.PNG">
                     <span class="tile-label">resume</span>
                 </div>
             </a>
-            <a href="javascript:void(0)" class="tile-whitepaper">
+            <a href="javascript:void(0)" class="tile-whitepaper" onclick="Menu.goToComedyPage()">
                 <div class="tile-content">
                     <img class="tile-image-icon" src="raw/t2.PNG">
                     <span class="tile-label">comedy</span>
                 </div>
             </a>
-            <a href="javascript:void(0)" onclick="ServerAPI.goToTeam()" class="tile-team">
+            <a href="javascript:void(0)" onclick="Menu.goToContactsPage()" class="tile-team">
                 <div class="tile-content">
                     <img class="tile-image-icon" src="raw/t3.PNG">
                     <span class="tile-label">contact</span>
@@ -59,55 +61,34 @@
             </a>
         </div>
 
-        <div id="walletscreen" class="tile-screen hidden">
+        <div id="projectsscreen" class="tile-screen hidden">
             <a class="tile-back tile-back-deposit" href="javascript:void(0)" onclick="Menu.goToHomeScreen()">
-                <img src="style/back_smaller.png">
+                <img src="raw/back_smaller.png">
             </a>
-            <div id="centerDepositContainer" class="deposit-contents">
-                <span id="depositWarningsArea" class="deposit-warnings"></span>
-                <input id="depositInputArea" class="deposit-address"></input>
-                <a href="javascript:void(0)" onclick="Menu.depositSubmitClicked()" class="deposit-submit">Submit</a>
-                <img id="depositSubmitSpinnerLoader" style="width: 30px; height: 30px;" class="hidden" src="style/tileIcons/loading_spinner.gif">
-            </div>
+            projectsss
         </div>
 
-    <div id="techscreen" class="tile-screen hidden">
-        <a class="tile-back" href="javascript:void(0)" onclick="Menu.goToHomeScreen()">
-            <img src="gsvcoin/style/back_smaller.png">
-        </a>
-        <a href="javascript:void(0)" onclick="Menu.goToSinglePlayScreen()" class="tile-large-top-play">
-            <div class="tile-content">
-                <img class="tile-image-icon" src="style/tileIcons/VersusComp.png">
-                <span class="tile-label">Single</span>
-            </div>
-        </a>
-        <a href="javascript:void(0)" onclick="Menu.goToVersusPlayScreen()" class="tile-large-bottom-play">
-            <div class="tile-content">
-                <img class="tile-image-icon" src="style/tileIcons/VersusPlayer2.png">
-                <span class="tile-label">Versus</span>
-            </div>
-        </a>
-    </div>
+        <div id="resumescreen" class="tile-screen hidden">
+            <a class="tile-back" href="javascript:void(0)" onclick="Menu.goToHomeScreen()">
+                <img src="raw/back_smaller.png">
+            </a>
+            resumescreen
+        </div>
 
-    <div id="whitepaperscreen" class="tile-screen hidden">
-        <a class="tile-back" href="javascript:void(0)" onclick="Menu.goToPlayScreen()">
-            <img src="style/back_smaller.png">
-        </a>
-    </div>
+        <div id="comedyscreen" class="tile-screen hidden">
+            <a class="tile-back" href="javascript:void(0)" onclick="Menu.goToPlayScreen()">
+                <img src="raw/back_smaller.png">
+            </a>
+            comedy screeen
+        </div>
 
-    <div id="teamscreen" class="tile-screen hidden">
-        <a class="tile-back" href="javascript:void(0)" onclick="Menu.goToHomeScreen()">
+        <div id="contactscreen" class="tile-screen hidden">
+            <a class="tile-back" href="javascript:void(0)" onclick="Menu.goToHomeScreen()">
             <!--Menu.goToVersusPlayScreen()-->
-            <img src="style/back_smaller.png">
-        </a>
-        <a class="tile-refresh" href="javascript:void(0)" onclick="ServerAPI.requestAvailableGames()">
-            <img src="style/tileIcons/refresh.png" style="width: 99px;height: 99px;">
-        </a>
-        <div class="tile-large-game-play-area">
-            <div id="tableOfPokerRoomsContainer" class="tile-content-poker-table-listing">
-            </div>
+                <img src="raw/back_smaller.png">
+            </a>
+            contact screnernren
         </div>
-    </div>
 
     <footer id="footerInformation"></footer>
 
