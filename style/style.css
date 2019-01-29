@@ -34,6 +34,8 @@ html{
 
 
 
+
+
 .tile-screen {
 	padding: 0.5em 0.5em 0.5em 0.5em;
 	width: 100%;
@@ -95,6 +97,28 @@ html{
 	padding-top: 5px;
 	color: rgb(180, 180, 180);
 }
+.tile-list-contents{
+	position: absolute;
+	top: 170px;
+	left: 20px;
+	width: calc(100vw - 40px);
+	height: calc(100vh - 230px);
+	//border: 1px rgb(220, 200, 40) solid;
+	//border-radius: 0px;
+	overflow-y: scroll;
+}
+.tile-list-item{
+	width: auto;
+	height: 140px;
+	border: solid green;
+	border-width: 3px;
+	font-size: 30px;
+	padding-bottom: 30px;
+}
+
+
+
+
 
 
 
@@ -116,9 +140,6 @@ html{
 	left: 23px;
 	box-shadow: 1px 1px 1px #000000;
 }
-
-
-
 .tile-tech {
 	border: 1px rgb(40, 255, 40) solid;
 	border-radius: 0px;
@@ -137,9 +158,6 @@ html{
 	right: 23px;
 	box-shadow: 1px 1px 1px #000000;
 }
-
-
-
 .tile-whitepaper {
 	border: 1px rgb(180, 140, 40) solid;
 	border-radius: 0px;
@@ -158,9 +176,6 @@ html{
 	left: 23px;
 	box-shadow: 1px 1px 1px #000000;
 }
-
-
-
 .tile-team {
 	border: 1px rgb(40, 40, 255) solid;
 	border-radius: 0px;
@@ -179,11 +194,6 @@ html{
 	right: 23px;
 	box-shadow: 1px 1px 1px #000000;
 }
-
-
-
-
-
 .tile-submit-transaction {
 	border: 2px rgb(253, 293, 18) solid;
 	width: calc(100vw - 40px);

@@ -60,6 +60,10 @@ Menu.onLoad = function(){
 
 
 //Different screens
+Menu.goToHomePage = function(){
+	Menu.hideAllDivs();
+	document.getElementById('homescreen').classList.remove('hidden');
+};
 Menu.goToProjectsPage = function(){
 	Menu.hideAllDivs();
 	document.getElementById('projectsscreen').classList.remove('hidden');
